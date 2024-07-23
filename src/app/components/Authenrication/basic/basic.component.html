@@ -1,0 +1,46 @@
+<div class="container m-4">
+    <div class="row" [formGroup]="basicForm" (ngSubmit)="onSubmit()">
+        <div class="col-md-6">
+            <div class="d-flex " *ngFor="let data of basicData">
+                <div >
+                    <label class="text-secondary mb-2" for="Block">{{data.Label}}</label>
+                <input [formControlName]="data.formControlName" type="number" id="Block" class="form-control mb-3" >
+                </div>
+                <div [class]="data.class">
+                    <span>{{data.text}}</span>
+                </div>
+            </div>
+            <input type="checkbox" id="Digits" formControlName="Digits">
+            <label class="ms-2" for="Digits">Should Contain Digits</label><br>
+            <input type="checkbox" id="Character"  formControlName="Character">
+            <label class="ms-2" for="Character">Should Contain Character</label><br>
+
+            <div>
+                <ng-select class="w-50"  [items]="listItem"
+                bindLabel="name"
+                bindValue="id"
+                [multiple]="true"
+                placeholder="Any"
+                formControlName="AvailableLanguages">
+             </ng-select>
+            </div>
+            <div *ngFor="let data of checkData">
+                <input type="checkbox" [id]="data.id"  [formControlName]="data.formControlName">
+            <label class="ms-2" [for]="data.id">{{data.Label}}</label><br>
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="d-flex " *ngFor="let data of basicLeftData">
+                <div >
+                    <label class="text-secondary mb-2" for="Block">{{data.Label}}</label>
+                <input [formControlName]="data.formControlName"  type="number" id="Block" class="form-control mb-3" >
+                </div>
+                <div [class]="data.class">
+                    <span>{{data.text}}</span>
+                </div>
+
+            </div>
+        </div>
+    </div><!--/row-->
+</div><!--/container-->

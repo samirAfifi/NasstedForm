@@ -1,0 +1,28 @@
+<div class="m-5">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <h6 class="text-secondary">AvailableLanguages</h6>
+        <ng-select class="w-50"  [items]="listItem"
+           bindLabel="name"
+           bindValue="id"
+           [multiple]="true"
+           formControlName="AvailableLanguages"
+           (change)="changeValue($event)"
+           >
+        </ng-select>
+        <h6 class="text-secondary">PrimaryLanguage</h6>
+         <ng-select class="w-25"  [items]="Primary"
+           bindLabel="name"
+           bindValue="id"
+          formControlName="PrimaryLanguage">
+        </ng-select>
+        <h6 class="text-secondary">SecondaryLanguage</h6>
+        <ng-select class="w-25"  [items]="Primary"
+          bindLabel="name"
+          bindValue="id"
+          formControlName="SecondaryLanguage">
+        </ng-select>
+       
+  
+    </form>
+
+</div>

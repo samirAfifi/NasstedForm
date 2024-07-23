@@ -1,0 +1,7 @@
+<div [formGroup]="LdapForm" (ngSubmit)="onSubmit()">
+    <div class="w-50 ms-5 mt-3" *ngFor="let data of ldapData" >
+        <label class="mb-1" for="street">{{data.Label}}</label>
+        <input id="street" class="form-control" [type]="data.type" [formControlName]="data.formControlName" />
+         
+        </div>
+</div>

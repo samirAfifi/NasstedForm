@@ -1,0 +1,10 @@
+<div class="m-4">
+      <input type="radio" id="standerd" name="fav_language" value="standerd">
+      <label for="standerd">standerd</label><br>
+      <input type="radio" id="custom" name="fav_language" value="custom">
+      <label for="custom">custom</label>
+    <div [formGroup]="SMSForm" (ngSubmit)="onSubmit()" class="m-3 w-50" *ngFor="let data of dataSms">
+        <label [class]="data.class" for="mail">{{data.Label}} </label>
+        <input [type]="data.type" id="mail" class="form-control mb-2" [formControlName]="data.formControlName">
+    </div>
+    </div>

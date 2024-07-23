@@ -1,0 +1,55 @@
+
+<ul class="nav nav-tabs mt-2" id="settingsTab" role="tablist">
+    <li class="nav-item" role="presentation" class="ms-4">
+      <button
+        class="nav-link active"
+        id="basic-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#basic"
+        type="button"
+        role="tab"
+        aria-controls="basic"
+        aria-selected="true"
+      >
+        basic
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="Ldap-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#Ldap"
+        type="button"
+        role="tab"
+        aria-controls="Ldap"
+        aria-selected="false"
+      >
+        Ldap
+      </button>
+    </li>
+    
+  </ul>
+   
+  <div class="tab-content">
+    <div
+      class="tab-pane active"
+      id="basic"
+      role="tabpanel"
+      aria-labelledby="basic-tab"
+    >
+    <app-basic></app-basic>
+     
+    </div>
+    <div
+      class="tab-pane fade"
+      id="Ldap"
+      role="tabpanel"
+      aria-labelledby="Ldap-tab"
+    >
+    <app-ldap></app-ldap>
+    </div>
+    
+  </div>
+   
+   
